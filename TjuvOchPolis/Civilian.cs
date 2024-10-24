@@ -10,18 +10,23 @@ namespace TjuvOchPolis
     internal class Civilian : Person
     {
 
-        public Civilian(int positionY, int positionX, int directionX, int directionY, char title, List<string> inventory) : base(positionX, positionY, directionX, directionY, title)
+        public Civilian(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'C')
         {
-            inventory.Add("Nycklar");
-            inventory.Add("Mobiltelefon");
-            inventory.Add("Pengar");
-            inventory.Add("Klocka");
+            //inventory.Add("Nycklar");
+            //inventory.Add("Mobiltelefon");
+            //inventory.Add("Pengar");
+            //inventory.Add("Klocka");
 
         }
-        public override void Name(char title)
-        {
-            title = 'C';
-        }
 
-    }
-}
+        public override char Title => 'C';
+       
+       
+       
+
+
+            }
+
+        }
+    
+
