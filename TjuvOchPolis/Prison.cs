@@ -15,11 +15,8 @@ namespace TjuvOchPolis
 
             for (int i = 0; i < height; i++)
             {
-
                 if (i == 0)
                 {
-                    //Console.Write("Fängelse");
-
                     for (int k = 0; k < width; k++)
                     {
                         Console.Write("=");
@@ -30,7 +27,6 @@ namespace TjuvOchPolis
                 {
 
                     Console.Write("Status");
-
 
                     for (int j = 6; j < width - 1; j++)
                     {

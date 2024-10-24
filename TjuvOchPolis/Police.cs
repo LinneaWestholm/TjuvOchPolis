@@ -8,11 +8,13 @@ namespace TjuvOchPolis
 {
     internal class Police: Person
     {
-
-        public Police(int positionY, int positionX, string title) : base(positionX, positionY, title)
+        public Police(int positionY, int positionX, int directionX, int directionY, char title) : base(positionX, positionY, directionX, directionY, title)
         {
             
         }
-
+        public override void Name(char title)
+        {
+            title = 'P';
+        }
     }
 }

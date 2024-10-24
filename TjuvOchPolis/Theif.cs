@@ -8,9 +8,15 @@ namespace TjuvOchPolis
 {
     internal class Theif: Person
     {
-        public Theif(int positionY, int positionX, int directionX, int directionY, string title) : base(positionX, positionY,directionX,directionY, title)
+        public Theif(int positionY, int positionX, int directionX, int directionY, char title) : base(positionX, positionY,directionX,directionY, title)
         {
             
+
+
+        }
+        public override void Name(char title)
+        {
+            title = 'T';
         }
     }
 }
