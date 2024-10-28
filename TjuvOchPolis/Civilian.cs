@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 namespace TjuvOchPolis
 {
 
-    internal class Civilian : Person
+    internal class Medborgare : Person
     {
 
-        public Civilian(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'C')
+        public Medborgare(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'C')
         {
-            //inventory.Add("Nycklar");
-            //inventory.Add("Mobiltelefon");
-            //inventory.Add("Pengar");
-            //inventory.Add("Klocka");
+    
 
         }
 

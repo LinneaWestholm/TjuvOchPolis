@@ -21,7 +21,7 @@ namespace TjuvOchPolis
                     int dirX = rnd.Next(-1, 2);
                     int dirY = rnd.Next(-1, 2);
 
-                    people.Add(new Civilian(posY, posX, dirX, dirY));
+                    people.Add(new Medborgare(posY, posX, dirX, dirY));
                 }
                 for (int i = 0; i < 5; i++)
                 {

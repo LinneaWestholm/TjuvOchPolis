@@ -15,7 +15,7 @@ namespace TjuvOchPolis
         public int DirectionY { get; set; }
         public int DirectionX { get; set; }
         public virtual char Title { get; }
-        public List<string> inventory { get; set; }
+        public List<string> Inventory { get; set; } = new List<string>();
 
         public Person(int positionY, int positionX, int directionX, int directionY, char title)
         {
