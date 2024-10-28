@@ -61,6 +61,23 @@ namespace TjuvOchPolis
 
         public void Movement()
         {
+            if (PositionX >= 98)
+            {
+                PositionX = 1;
+            }
+            if (PositionX <= 0)
+            {
+                PositionX = 97;
+            }
+            if (PositionY >= 24)
+            {
+                PositionY = 1;
+            }            
+            if (PositionY <= 0)
+            {
+                PositionY = 23;
+            }
+
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(Title);
         }
