@@ -67,9 +67,9 @@ namespace TjuvOchPolis
             }
             if (PositionX <= 0)
             {
-                PositionX = 97;
+                PositionX = 98;
             }
-            if (PositionY >= 24)
+            if (PositionY == 24)
             {
                 PositionY = 1;
             }            
