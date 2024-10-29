@@ -14,17 +14,17 @@ namespace TjuvOchPolis
 
         }
 
-        public void StjälFrån(Medborgare medborgare)
+        public void StjälFrån(Civilian civilian)
         {
-            if (medborgare.Inventory.Count > 0)
+            if (civilian.Inventory.Count > 0)
             {
                 Random rand = new Random();
-                int itemIndex = rand.Next(medborgare.Inventory.Count);
-                string stulenSak = medborgare.Inventory[itemIndex];
+                int itemIndex = rand.Next(civilian.Inventory.Count);
+                string stulenSak = civilian.Inventory[itemIndex];
                 Inventory.Add(stulenSak);
-                medborgare.Inventory.RemoveAt(itemIndex);
+                civilian.Inventory.RemoveAt(itemIndex);
                 Console.WriteLine($"Tjuv rånar medborgare och tar {stulenSak}.");
-                Thread.Sleep(2000);
+                
             }
         }
 

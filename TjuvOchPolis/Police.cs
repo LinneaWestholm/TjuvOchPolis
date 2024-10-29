@@ -13,6 +13,19 @@ namespace TjuvOchPolis
         {
            
         }
+        public void Confiscate(Police police, Theif theif)
+        {
+            if (theif.Inventory.Count > 0)
+            {
+
+                int itemIndex = theif.Inventory.Count;
+                string stulenSak = theif.Inventory[itemIndex];
+                Inventory.Add(stulenSak);
+                theif.Inventory.RemoveAt(itemIndex);
+                Console.WriteLine($"{police} tar {stulenSak} som {theif} har stulit.");
+
+            }
+        }
         public override char Title => 'P';
     }
 }
