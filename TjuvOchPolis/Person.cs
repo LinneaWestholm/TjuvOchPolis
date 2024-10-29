@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TjuvOchPolis
 {
 
-    internal class Person
+    public class Person
     {
         public int PositionY { get; set; }
         public int PositionX { get; set; }
@@ -24,14 +24,14 @@ namespace TjuvOchPolis
             DirectionX = directionX;
             DirectionY = directionY;
             Title = title;
-          
+
         }
         public virtual void Name(char title)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             title = 'Q';
         }
-       
+
         public void Move()
         {
             PositionX += DirectionX;
@@ -58,7 +58,7 @@ namespace TjuvOchPolis
             if (PositionY == 24)
             {
                 PositionY = 1;
-            }            
+            }
             if (PositionY <= 0)
             {
                 PositionY = 23;

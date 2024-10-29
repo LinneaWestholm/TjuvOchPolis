@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace TjuvOchPolis
 {
-    internal class Police : Person
+    public class Police : Person
     {
         public Police(int positionY, int positionX, int directionX, int directionY) : base(positionX, positionY, directionX, directionY, 'P')
         {

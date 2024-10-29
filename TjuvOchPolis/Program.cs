@@ -6,7 +6,7 @@ namespace TjuvOchPolis
     {
         static void Main(string[] args)
         {
-        Console.Title = "Tjuv och Polis";
+            Console.Title = "Tjuv och Polis";
 
             List<string> inventory = new List<string>();
             {
@@ -63,14 +63,15 @@ namespace TjuvOchPolis
                     people.Add(new Theif(posY, posX, dirX, dirY));
                 }
 
-                    while (true)
-                    {
-                        Console.Clear();
+                while (true)
+                {
+
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
 
                     City.Print();
-                        foreach (Person person in people)
-                        {
+                    foreach (Person person in people)
+                    {
                         if (person.Title == 'P')
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
@@ -84,13 +85,16 @@ namespace TjuvOchPolis
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
                         person.Move();
-                            person.Movement();
-                        }
-                        Thread.Sleep(500);
+                        person.Movement();
                     }
+                    Thread.Sleep(500);
 
                 }
+
             }
+
+
         }
     }
+}
 
