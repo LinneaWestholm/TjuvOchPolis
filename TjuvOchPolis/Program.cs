@@ -6,6 +6,8 @@ namespace TjuvOchPolis
     {
         static void Main(string[] args)
         {
+        Console.Title = "Tjuv och Polis";
+
             List<string> inventory = new List<string>();
             {
 
@@ -21,6 +23,11 @@ namespace TjuvOchPolis
                     int dirX = rnd.Next(-1, 2);
                     int dirY = rnd.Next(-1, 2);
 
+                    if (dirX == 0 && dirY == 0)
+                    {
+                        dirX = 1;
+                    }
+
                     people.Add(new Medborgare(posY, posX, dirX, dirY));
                 }
                 for (int i = 0; i < 5; i++)
@@ -30,6 +37,12 @@ namespace TjuvOchPolis
                     int dirX = rnd.Next(-1, 2);
                     int dirY = rnd.Next(-1, 2);
 
+                    if (dirX == 0 && dirY == 0)
+                    {
+                        dirX = -1;
+                    }
+
+
                     people.Add(new Police(posY, posX, dirX, dirY));
                 }
                 for (int i = 0; i < 10; i++)
@@ -38,6 +51,11 @@ namespace TjuvOchPolis
                     int posY = rnd.Next(1, 99);
                     int dirX = rnd.Next(-1, 2);
                     int dirY = rnd.Next(-1, 2);
+                    if (dirX == 0 && dirY == 0)
+                    {
+                        dirY = 1;
+                    }
+
 
                     people.Add(new Theif(posY, posX, dirX, dirY));
                 }
