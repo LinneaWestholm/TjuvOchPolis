@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace TjuvOchPolis
 {
 
-    internal class Medborgare : Person
+    internal class Civilian : Person
     {
 
-        public Medborgare(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'C')
+        public Civilian(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'C')
         {
     
 
