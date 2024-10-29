@@ -17,18 +17,20 @@ namespace TjuvOchPolis
             {
                 if (i == 0)
                 {
+                    Console.SetCursorPosition(110, 0);
                     for (int k = 0; k < width; k++)
                     {
+                        
                         Console.Write("=");
                     }
                     Console.WriteLine();
                 }
                 else if (i == height - 1)
                 {
+                    Console.SetCursorPosition(110, 9);
+                    Console.Write("Fängelse");
 
-                    Console.Write("Status");
-
-                    for (int j = 6; j < width - 1; j++)
+                    for (int j = 7; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }
@@ -38,13 +40,16 @@ namespace TjuvOchPolis
                 }
                 else
                 {
+                    Console.SetCursorPosition(110, i);
                     Console.Write("|");
 
                     for (int j = 1; j < width - 1; j++)
                     {
+                        
                         Console.Write(" ");
+                        
                     }
-
+                    
                     Console.Write("|");
 
                     Console.WriteLine();

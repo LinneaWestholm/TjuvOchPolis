@@ -28,10 +28,10 @@ namespace TjuvOchPolis
                 else if (i == height - 2)
                 {
 
-                    Console.Write("Fängelse");
+                    Console.Write("Status");
 
 
-                    for (int j = 8; j < width - 1; j++)
+                    for (int j = 5; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }
@@ -56,6 +56,7 @@ namespace TjuvOchPolis
 
                 }
             }
+            
             Prison.PrintPrison();
         }
     }
