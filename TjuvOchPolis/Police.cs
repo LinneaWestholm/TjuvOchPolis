@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace TjuvOchPolis
 {
-    internal class Police: Person
+    internal class Police : Person
     {
-        public Police(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'P')
+        public Police(int positionY, int positionX, int directionX, int directionY) : base(positionX, positionY, directionX, directionY, 'P')
         {
             
         }
         public override char Title => 'P';
+        
+
+
     }
-    }
+}
 

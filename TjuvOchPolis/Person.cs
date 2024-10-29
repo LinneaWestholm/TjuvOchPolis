@@ -28,7 +28,8 @@ namespace TjuvOchPolis
         }
         public virtual void Name(char title)
         {
-            title = 'c';
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            title = 'Q';
         }
         //static void RandomXY()
         //{

@@ -10,8 +10,9 @@ namespace TjuvOchPolis
     {
         public Theif(int positionY, int positionX, int directionX, int directionY) : base(positionX, positionY, directionX, directionY, 'T')
         {
+            
 
-         }
+        }
 
         public void StjälFrån(Medborgare medborgare)
         {

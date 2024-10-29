@@ -45,11 +45,24 @@ namespace TjuvOchPolis
                     while (true)
                     {
                         Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.White;
 
-                        City.Print();
+                    City.Print();
                         foreach (Person person in people)
                         {
-                            person.Move();
+                        if (person.Title == 'P')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                        }
+                        if (person.Title == 'T')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
+                        if (person.Title == 'C')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                        person.Move();
                             person.Movement();
                         }
                         Thread.Sleep(500);
