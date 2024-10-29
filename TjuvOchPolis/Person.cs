@@ -24,28 +24,13 @@ namespace TjuvOchPolis
             DirectionX = directionX;
             DirectionY = directionY;
             Title = title;
-
+          
         }
         public virtual void Name(char title)
         {
             title = 'c';
         }
-        //static void RandomXY()
-        //{
-        //    Random rnd = new Random(99);
-        //    int positionX = rnd.Next(1, 99);
-
-        //    Random rnd2 = new Random(24);
-        //    int positionY = rnd2.Next(1, 24);
-        //}
-
-        static void PlacePerson()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-
-            }
-        }
+       
         public void Move()
         {
             PositionX += DirectionX;

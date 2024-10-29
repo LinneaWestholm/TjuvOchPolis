@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TjuvOchPolis
 {
-    internal class Police: Person
+    internal class Police : Person
     {
-        public Police(int positionY, int positionX, int directionX, int directionY ) : base(positionX, positionY, directionX, directionY, 'P')
+        public Police(int positionY, int positionX, int directionX, int directionY) : base(positionX, positionY, directionX, directionY, 'P')
         {
-            
+           
         }
         public override char Title => 'P';
+        char title = (char)ConsoleColor.Blue;
+
+
+
+
+
     }
-    }
+}
 
