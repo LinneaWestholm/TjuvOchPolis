@@ -25,7 +25,8 @@ namespace TjuvOchPolis
 
                     if (dirX == 0 && dirY == 0)
                     {
-                        dirX = 1;
+                        dirX = rnd.Next(-1, 2);
+                        dirY = rnd.Next(1, 2);
                     }
 
                     people.Add(new Civilian(posY, posX, dirX, dirY));
@@ -39,7 +40,8 @@ namespace TjuvOchPolis
 
                     if (dirX == 0 && dirY == 0)
                     {
-                        dirX = -1;
+                        dirX = rnd.Next(-1, 2);
+                        dirY = rnd.Next(1, 2);
                     }
 
 
@@ -53,7 +55,8 @@ namespace TjuvOchPolis
                     int dirY = rnd.Next(-1, 2);
                     if (dirX == 0 && dirY == 0)
                     {
-                        dirY = 1;
+                        dirX = rnd.Next(-1, 2);
+                        dirY = rnd.Next(1, 2);
                     }
 
 
