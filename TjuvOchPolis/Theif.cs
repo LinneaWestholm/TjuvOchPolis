@@ -28,6 +28,8 @@ namespace TjuvOchPolis
 
                     Console.SetCursorPosition(1, 25);
                     Console.WriteLine($"{Name} rånar {civilian.Name} och tar {stulenSak}.");
+                    civilian.PositionX = 120;
+                    civilian.PositionY = 5;
                     Thread.Sleep(2000);
                     hasStolen = true;
 
