@@ -48,46 +48,22 @@ namespace TjuvOchPolis
         }
         public void Movement()
         {
-
             if (PositionX < 100)
             {
-                if (PositionX >= 98)
-                {
-                    PositionX = 1;
-                }
-                if (PositionX <= 0)
-                {
-                    PositionX = 98;
-                }
-                if (PositionY == 24)
-                {
-                    PositionY = 1;
-                }
-                if (PositionY <= 0)
-                {
-                    PositionY = 23;
-                }
+                if (PositionX >= 98) PositionX = 1;
+                else if (PositionX <= 0) PositionX = 98;
             }
-            if (PositionX > 100)
+            else 
             {
-                if (PositionX >= 134)
-                {
-                    PositionX = 111;
-                }
-                if (PositionX <= 110)
-                {
-                    PositionX = 134;
-                }
-                if (PositionY >= 24)
-                {
-                    PositionY = 1;
-                }
-                if (PositionY <= 0)
-                {
-                    PositionY = 23;
-                }
+                if (PositionX >= 134) PositionX = 111;
+                else if (PositionX <= 110) PositionX = 134;
             }
 
+            
+            if (PositionY >= 24) PositionY = 1;
+            else if (PositionY <= 0) PositionY = 23;
+
+            
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(Title);
         }
