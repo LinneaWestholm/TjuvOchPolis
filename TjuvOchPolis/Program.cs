@@ -90,6 +90,25 @@ namespace TjuvOchPolis
                         person.Move();
                         person.Movement();
                     }
+                    foreach (var civilian in people.OfType<Civilian>())
+                    {
+                        foreach (var police in people.OfType<Police>())
+                        {
+                            foreach (var thief in people.OfType<Theif>())
+                            {
+                                if (civilian.PositionX == thief.PositionX && civilian.PositionY == thief.PositionY)
+                                {
+                                    ColideHelper.Colide(civilian, police, thief);
+                                }
+                                else if (police.PositionX == thief.PositionX && police.PositionY == thief.PositionY)
+                                {
+                                    ColideHelper.Colide(civilian, police, thief);
+                                }
+                            }
+                        }
+
+
+                    }
                     Thread.Sleep(500);
 
                 }

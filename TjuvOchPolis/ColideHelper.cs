@@ -9,7 +9,7 @@ namespace TjuvOchPolis
     public class ColideHelper
     {
         
-        public void Colide(Civilian civilian, Police police, Theif theif)
+        public static void Colide(Civilian civilian, Police police, Theif theif)
         {
             if (civilian.PositionY == theif.PositionY && civilian.PositionX == theif.PositionX)
             {

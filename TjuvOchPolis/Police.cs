@@ -22,6 +22,7 @@ namespace TjuvOchPolis
                 string stulenSak = theif.Inventory[itemIndex];
                 Inventory.Add(stulenSak);
                 theif.Inventory.RemoveAt(itemIndex);
+                Console.SetCursorPosition(1, 26);
                 Console.WriteLine($"{police} tar {stulenSak} som {theif} har stulit.");
 
             }

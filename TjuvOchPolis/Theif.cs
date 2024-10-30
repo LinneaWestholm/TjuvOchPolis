@@ -22,8 +22,9 @@ namespace TjuvOchPolis
                 string stulenSak = civilian.Inventory[itemIndex];
                 Inventory.Add(stulenSak);
                 civilian.Inventory.RemoveAt(itemIndex);
+                Console.SetCursorPosition(1, 25);
                 Console.WriteLine($"Tjuv rånar medborgare och tar {stulenSak}.");
-                Thread.Sleep(10000);
+                Thread.Sleep(2000);
             }
         }
 
