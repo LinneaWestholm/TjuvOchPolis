@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,20 +70,27 @@ namespace TjuvOchPolis
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(Title);
         }
-        public static string CreatePerson()
+        private static List<string> names = new List<string>()
         {
-            List<string> names = new List<string>()
-    {
+
+
         "Erik Eriksson", "Fardhe Magnusson","Velam Johannesson","Julian Sjöholm","Albert Almqvist","Eric Forslund","Lucas Lindroth","Leif Ohly","Locis Svensson",
         "Alex Öberg", "John Lagerkvist","Christian Lötvall","Åke Liljeström","Oskar Björk","Kjell Afzelius","Elliot Sjöberg","Sverker Sundström","Stella Englund",
         "Per Fornberg", "Viggo Forslund","Gösta Sundström","Valter Aspelund","Håkan Sparv","Jack Jansson","Isac Hagelin","Folke Adelsköld","Elin Augustsson",
         "Fardhe Stenström","Calle Rehnquist","Vincent Holm","Johan Lindeman","Hans Fornberg","Spjälle Malmkvist","Leif Bloch","Ella Lagerlöf"
 
     };
-            Random random = new Random();
-            return names[random.Next(names.Count)];
-        }
+        private static Random rnd = new Random();
+        public static string CreatePerson()
+        {
+            int ind = rnd.Next(names.Count);
+            string name = names[ind];
 
+            names.RemoveAt(ind);
+            return name;
+        }
     }
+
 }
+
 

@@ -11,23 +11,30 @@ namespace TjuvOchPolis
     {
         public Police(int positionY, int positionX, int directionX, int directionY, string name) : base(positionX, positionY, directionX, directionY, 'P', name)
         {
-           
+
         }
         public void Confiscate(Police police, Theif theif)
         {
             if (theif.Inventory.Count > 0)
             {
+                foreach (var item in theif.Inventory)
+                {
+                    police.Inventory.Add(item);
+                    Console.SetCursorPosition(1, 26);
+                    Console.WriteLine($"{police.Name} tar {item} som {theif.Name} har stulit.");
+                    Thread.Sleep(2000);
+                }
+                theif.Inventory.Clear();
+            }
+            else
+            {
 
-                int itemIndex = theif.Inventory.Count;
-                string stulenSak = theif.Inventory[itemIndex];
-                Inventory.Add(stulenSak);
-                theif.Inventory.RemoveAt(itemIndex);
                 Console.SetCursorPosition(1, 26);
-                Console.WriteLine($"{police} tar {stulenSak} som {theif} har stulit.");
-
+                Console.WriteLine($"{theif.Name} har inga stulna föremål att ta.");
             }
         }
-        public override char Title => 'P';
+    public override char Title => 'P';
     }
 }
+
 
