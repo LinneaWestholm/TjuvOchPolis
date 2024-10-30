@@ -10,6 +10,7 @@ namespace TjuvOchPolis
 
     public class Person
     {
+        public string NameGiver { get; private set; }
         public int PositionY { get; set; }
         public int PositionX { get; set; }
         public int DirectionY { get; set; }
@@ -17,13 +18,14 @@ namespace TjuvOchPolis
         public virtual char Title { get; }
         public List<string> Inventory { get; set; } = new List<string>();
 
-        public Person(int positionY, int positionX, int directionX, int directionY, char title)
+        public Person(int positionY, int positionX, int directionX, int directionY, char title, string nameGiver)
         {
             PositionY = positionY;
             PositionX = positionX;
             DirectionX = directionX;
             DirectionY = directionY;
             Title = title;
+            NameGiver = nameGiver;
 
         }
         public virtual void Name(char title)
@@ -67,7 +69,7 @@ namespace TjuvOchPolis
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(Title);
         }
-        public void CreatePerson()
+        public static string CreatePerson()
         {
             List<string> names = new List<string>()
     {
@@ -78,7 +80,7 @@ namespace TjuvOchPolis
 
     };
             Random random = new Random();
-            string randomName = names[random.Next(names.Count)];
+            return names[random.Next(names.Count)];
         }
 
     }

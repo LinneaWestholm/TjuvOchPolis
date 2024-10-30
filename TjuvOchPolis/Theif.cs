@@ -8,7 +8,7 @@ namespace TjuvOchPolis
 {
     public class Theif : Person
     {
-        public Theif(int positionY, int positionX, int directionX, int directionY) : base(positionX, positionY, directionX, directionY, 'T')
+        public Theif(int positionY, int positionX, int directionX, int directionY, string nameGiver) : base(positionX, positionY, directionX, directionY, 'T', nameGiver)
         {
             
 
