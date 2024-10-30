@@ -9,7 +9,7 @@ namespace TjuvOchPolis
 {
     public class Police : Person
     {
-        public Police(int positionY, int positionX, int directionX, int directionY, string nameGiver) : base(positionX, positionY, directionX, directionY, 'P', nameGiver)
+        public Police(int positionY, int positionX, int directionX, int directionY, string name) : base(positionX, positionY, directionX, directionY, 'P', name)
         {
            
         }

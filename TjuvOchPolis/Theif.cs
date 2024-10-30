@@ -8,24 +8,41 @@ namespace TjuvOchPolis
 {
     public class Theif : Person
     {
-        public Theif(int positionY, int positionX, int directionX, int directionY, string nameGiver) : base(positionX, positionY, directionX, directionY, 'T', nameGiver)
+        private bool hasStolen = false;
+        public Theif(int positionY, int positionX, int directionX, int directionY, string name) : base(positionX, positionY, directionX, directionY, 'T', name)
         {
             
 
         }
         public void StjälFrån(Civilian civilian)
         {
-            if (civilian.Inventory.Count > 0)
+            if (!hasStolen)
             {
-                Random rand = new Random();
-                int itemIndex = rand.Next(civilian.Inventory.Count);
-                string stulenSak = civilian.Inventory[itemIndex];
-                Inventory.Add(stulenSak);
-                civilian.Inventory.RemoveAt(itemIndex);
-                Console.SetCursorPosition(1, 25);
-                Console.WriteLine($"Tjuv rånar medborgare och tar {stulenSak}.");
-                Thread.Sleep(2000);
+                if (civilian.Inventory.Count > 0)
+                {
+                    Random rand = new Random();
+                    int itemIndex = rand.Next(civilian.Inventory.Count);
+                    string stulenSak = civilian.Inventory[itemIndex];
+                    Inventory.Add(stulenSak);
+                    civilian.Inventory.RemoveAt(itemIndex);
+
+                    Console.SetCursorPosition(1, 25);
+                    Console.WriteLine($"{Name} rånar {civilian.Name} och tar {stulenSak}.");
+                    Thread.Sleep(2000);
+                    hasStolen = true;
+
+                }
+                else
+                {
+                    Console.SetCursorPosition(1, 25);
+                    Console.WriteLine($"{civilian.Name} har inga saker kvar.");
+                    Thread.Sleep(2000);
+                }
             }
+        }
+        public void Stolen()
+        {
+            hasStolen = false;
         }
 
         public override char Title => 'T';

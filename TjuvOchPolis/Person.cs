@@ -10,7 +10,7 @@ namespace TjuvOchPolis
 
     public class Person
     {
-        public string NameGiver { get; private set; }
+        public string Name { get; private set; }
         public int PositionY { get; set; }
         public int PositionX { get; set; }
         public int DirectionY { get; set; }
@@ -25,10 +25,10 @@ namespace TjuvOchPolis
             DirectionX = directionX;
             DirectionY = directionY;
             Title = title;
-            NameGiver = nameGiver;
+            Name = nameGiver;
 
         }
-        public virtual void Name(char title)
+        public virtual void NameTitle(char title)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             title = 'Q';
