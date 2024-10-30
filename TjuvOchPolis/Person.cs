@@ -71,21 +71,21 @@ namespace TjuvOchPolis
             }
             if (PositionX > 100)
             {
-                if (PositionX >= 134)
+                if (PositionX >= 133)
                 {
                     PositionX = 111;
                 }
                 if (PositionX <= 110)
                 {
-                    PositionX = 134;
+                    PositionX = 133;
                 }
-                if (PositionY >= 24)
+                if (PositionY >= 8)
                 {
                     PositionY = 1;
                 }
                 if (PositionY <= 0)
                 {
-                    PositionY = 23;
+                    PositionY = 8;
                 }
             }
 
