@@ -100,6 +100,27 @@ namespace TjuvOchPolis
             names.RemoveAt(ind);
             return name;
         }
+
+        //public static void Status(Police police)
+        //{
+        //    Console.SetCursorPosition(110, 26);
+        //    Console.WriteLine($"{police}");
+        //}
+        public static void Status(List<Person> people)
+        {
+            // Räknar antalet poliser i listan
+            int policeCount = people.OfType<Police>().Count();
+            int thiefCount = people.OfType<Theif>().Count();
+            int civilianCount = people.OfType<Civilian>().Count();
+
+            Console.SetCursorPosition(110, 26);
+            Console.WriteLine($"Antal poliser: {policeCount}");
+            Console.SetCursorPosition(110, 27);
+      
+            Console.WriteLine($"Antal tjuvar: {thiefCount}");
+            Console.SetCursorPosition(110, 28);
+            Console.WriteLine($"Antal medborgare: {civilianCount}");
+        }
     }
 
 }

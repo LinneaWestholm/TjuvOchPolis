@@ -1,4 +1,5 @@
-﻿using System.Threading.Channels;
+﻿using System.Collections.Generic;
+using System.Threading.Channels;
 
 namespace TjuvOchPolis
 {
@@ -73,6 +74,7 @@ namespace TjuvOchPolis
                     Console.ForegroundColor = ConsoleColor.White;
 
                     City.Print();
+                    Person.Status(people);
                     foreach (Person person in people)
                     {
                         if (person.Title == 'P')
