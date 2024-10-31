@@ -27,9 +27,7 @@ namespace TjuvOchPolis
                 }
                 else if (i == height - 2)
                 {
-
                     Console.Write("News Feed");
-
 
                     for (int j = 8; j < width - 1; j++)
                     {
@@ -53,10 +51,8 @@ namespace TjuvOchPolis
 
                     Console.Write("X");
                     Console.WriteLine();
-
                 }
             }
-
             Prison.PrintPrison();
             PoorMansHouse.PrintPoorMansHouse();
         }
