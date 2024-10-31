@@ -21,7 +21,9 @@ namespace TjuvOchPolis
                 {
                     police.Inventory.Add(item);
                     Console.SetCursorPosition(1, 26);
-                    Console.WriteLine($"{police.Name} tar {item} som {theif.Name} har stulit.");
+                    Console.WriteLine($"Polisen {police.Name} tar {item} som tjuven {theif.Name} har stulit.");
+                    theif.PositionX = 120;
+                    theif.PositionY = 5;
                     Thread.Sleep(2000);
                 }
                 theif.Inventory.Clear();

@@ -6,32 +6,31 @@ using System.Threading.Tasks;
 
 namespace TjuvOchPolis
 {
-    internal class City
+    public class PoorMansHouse
     {
-        public static void Print()
+        public static void PrintPoorMansHouse()
         {
-            int width = 100;
-            int height = 26;
+            int width = 25;
+            int height = 13;
 
             for (int i = 0; i < height; i++)
             {
                 if (i == 0)
                 {
-                    Console.Write("City");
-
-                    for (int k = 4; k < width; k++)
+                    Console.SetCursorPosition(110, 12);
+                    for (int k = 0; k < width; k++)
                     {
+
                         Console.Write("=");
                     }
                     Console.WriteLine();
                 }
-                else if (i == height - 2)
+                else if (i == height - 1)
                 {
+                    Console.SetCursorPosition(110, 24);
+                    Console.Write("Härberge");
 
-                    Console.Write("Status");
-
-
-                    for (int j = 5; j < width - 1; j++)
+                    for (int j = 7; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }
@@ -39,26 +38,24 @@ namespace TjuvOchPolis
                     Console.Write(" ");
                     Console.WriteLine();
                 }
-                else if (i == height - 1)
-                {
-                }
                 else
                 {
-                    Console.Write("X");
+                    Console.SetCursorPosition(110, i+12);
+                    Console.Write("|");
 
                     for (int j = 1; j < width - 1; j++)
                     {
+
                         Console.Write(" ");
+
                     }
 
-                    Console.Write("X");
-                    Console.WriteLine();
+                    Console.Write("|");
 
+                    Console.WriteLine();
                 }
             }
-
-            Prison.PrintPrison();
-            PoorMansHouse.PrintPoorMansHouse();
         }
     }
 }
+

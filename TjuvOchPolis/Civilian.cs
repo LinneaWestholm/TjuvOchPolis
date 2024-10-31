@@ -13,7 +13,7 @@ namespace TjuvOchPolis
         public Civilian(int positionY, int positionX, int directionX, int directionY, string name ) : base(positionX, positionY, directionX, directionY, 'C', name)
         {
 
-            Inventory.AddRange(new List<string> { "Nycklar", "Klocka", "Mobiltelefon", "Pengar" });
+            Inventory.AddRange(new List<string> { "nycklar", "klocka", "mobiltelefon", "pengar" });
 
         }
 

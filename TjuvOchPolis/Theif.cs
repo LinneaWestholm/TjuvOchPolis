@@ -27,9 +27,15 @@ namespace TjuvOchPolis
                     civilian.Inventory.RemoveAt(itemIndex);
 
                     Console.SetCursorPosition(1, 25);
-                    Console.WriteLine($"{Name} rånar {civilian.Name} och tar {stulenSak}.");
-                    civilian.PositionX = 120;
-                    civilian.PositionY = 5;
+                    Console.WriteLine($"Tjuven {Name} rånar medborgaren {civilian.Name} och tar {stulenSak}.");
+                    if (civilian.Inventory.Count == 0)
+                    {
+                        civilian.PositionX = 120;
+                        civilian.PositionY = 20;
+                        Console.SetCursorPosition(1, 25);
+                        Console.WriteLine($"Medborgaren {civilian.Name} har inga värdesaker kvar och behöver åka till härberget för att kunna överleva.");
+                        Thread.Sleep(10000);
+                    }
                     Thread.Sleep(2000);
                     hasStolen = true;
 
