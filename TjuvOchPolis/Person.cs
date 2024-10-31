@@ -29,19 +29,16 @@ namespace TjuvOchPolis
             DirectionY = directionY;
             Title = title;
             Name = nameGiver;
-
         }
         public virtual void NameTitle(char title)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             title = 'Q';
         }
-
         public void Move()
         {
             PositionX += DirectionX;
             PositionY += DirectionY;
-
 
             if (PositionX < 0) PositionX = 0;
             if (PositionX >= Console.WindowWidth) PositionX = Console.WindowWidth - 2;
@@ -52,37 +49,31 @@ namespace TjuvOchPolis
         {
             if (PositionX < 100)
             {
-                   if (PositionX >= 98)     PositionX = 1;
-                   if (PositionX <= 0)      PositionX = 98;
-                   if (PositionY <= 0)      PositionY = 23;
-                   if (PositionY >= 24)     PositionY = 1;
+                if (PositionX >= 98) PositionX = 1;
+                if (PositionX <= 0) PositionX = 98;
+                if (PositionY <= 0) PositionY = 23;
+                if (PositionY >= 24) PositionY = 1;
             }
-            if (PositionX > 100)  
+            if (PositionX > 100)
             {
-                if (PositionX >= 134)       PositionX = 111;
-                if (PositionX <= 110)       PositionX = 133;
+                if (PositionX >= 134) PositionX = 111;
+                if (PositionX <= 110) PositionX = 133;
                 if (PositionY < 10)
-                {                    
-                    if (PositionY <= 0)     PositionY = 8;
-                    if (PositionY >= 9)     PositionY = 1;
+                {
+                    if (PositionY <= 0) PositionY = 8;
+                    if (PositionY >= 9) PositionY = 1;
                 }
                 if (PositionY > 10)
-                {                    
-                    if (PositionY <= 13)    PositionY = 23;
-                    if (PositionY >= 24)    PositionY = 14;
+                {
+                    if (PositionY <= 13) PositionY = 23;
+                    if (PositionY >= 24) PositionY = 14;
                 }
             }
-            
-            
-
-            
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(Title);
         }
         private static List<string> names = new List<string>()
         {
-
-
         "Erik Eriksson", "Fardhe Magnusson","Velam Johannesson","Julian Sjöholm","Albert Almqvist","Eric Forslund","Lucas Lindroth","Leif Ohly","Locis Svensson",
         "Alex Öberg", "John Lagerkvist","Christian Lötvall","Åke Liljeström","Oskar Björk","Kjell Afzelius","Elliot Sjöberg","Sverker Sundström","Stella Englund",
         "Per Fornberg", "Viggo Forslund","Gösta Sundström","Valter Aspelund","Håkan Sparv","Jack Jansson","Isac Hagelin","Folke Adelsköld","Elin Augustsson",
@@ -101,7 +92,6 @@ namespace TjuvOchPolis
             return name;
         }
     }
-
 }
 
 

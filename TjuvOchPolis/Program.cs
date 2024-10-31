@@ -7,11 +7,9 @@ namespace TjuvOchPolis
         static void Main(string[] args)
         {
             Console.Title = "Tjuv och Polis";
-            
+
             List<string> inventory = new List<string>();
             {
-               
-
                 Random rnd = new Random();
 
                 List<Person> people = new List<Person>();
@@ -29,7 +27,6 @@ namespace TjuvOchPolis
                         dirX = rnd.Next(-1, 2);
                         dirY = rnd.Next(1, 2);
                     }
-
                     people.Add(new Civilian(posY, posX, dirX, dirY, randomName));
                 }
                 for (int i = 0; i < 5; i++)
@@ -45,8 +42,6 @@ namespace TjuvOchPolis
                         dirX = rnd.Next(-1, 2);
                         dirY = rnd.Next(1, 2);
                     }
-
-
                     people.Add(new Police(posY, posX, dirX, dirY, randomName));
                 }
                 for (int i = 0; i < 10; i++)
@@ -61,14 +56,10 @@ namespace TjuvOchPolis
                         dirX = rnd.Next(-1, 2);
                         dirY = rnd.Next(1, 2);
                     }
-
-
                     people.Add(new Theif(posY, posX, dirX, dirY, randomName));
                 }
-
                 while (true)
                 {
-
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
 
@@ -110,16 +101,10 @@ namespace TjuvOchPolis
                                 }
                             }
                         }
-
-
                     }
                     Thread.Sleep(500);
-
                 }
-
             }
-
-
         }
     }
 }

@@ -11,7 +11,6 @@ namespace TjuvOchPolis
     {
         public Police(int positionY, int positionX, int directionX, int directionY, string name) : base(positionX, positionY, directionX, directionY, 'P', name)
         {
-
         }
         public void Confiscate(Police police, Theif theif)
         {
@@ -30,12 +29,11 @@ namespace TjuvOchPolis
             }
             else
             {
-
                 Console.SetCursorPosition(1, 26);
                 Console.WriteLine($"{theif.Name} har inga stulna föremål att ta.");
             }
         }
-    public override char Title => 'P';
+        public override char Title => 'P';
     }
 }
 

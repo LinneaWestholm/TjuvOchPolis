@@ -11,8 +11,6 @@ namespace TjuvOchPolis
         private bool hasStolen = false;
         public Theif(int positionY, int positionX, int directionX, int directionY, string name) : base(positionX, positionY, directionX, directionY, 'T', name)
         {
-            
-
         }
         public void StjälFrån(Civilian civilian)
         {
@@ -34,17 +32,10 @@ namespace TjuvOchPolis
                         civilian.PositionY = 20;
                         Console.SetCursorPosition(1, 25);
                         Console.WriteLine($"Medborgaren {civilian.Name} har inga värdesaker kvar och behöver åka till härberget för att kunna överleva.");
-                        Thread.Sleep(10000);
+                        Thread.Sleep(2000);
                     }
                     Thread.Sleep(2000);
                     hasStolen = true;
-
-                }
-                else
-                {
-                    Console.SetCursorPosition(1, 25);
-                    Console.WriteLine($"{civilian.Name} har inga saker kvar.");
-                    Thread.Sleep(2000);
                 }
             }
         }
@@ -52,7 +43,6 @@ namespace TjuvOchPolis
         {
             hasStolen = false;
         }
-
         public override char Title => 'T';
     }
 }
