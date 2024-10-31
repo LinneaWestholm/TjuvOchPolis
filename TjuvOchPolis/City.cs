@@ -28,10 +28,10 @@ namespace TjuvOchPolis
                 else if (i == height - 2)
                 {
 
-                    Console.Write("Status");
+                    Console.Write("News Feed");
 
 
-                    for (int j = 5; j < width - 1; j++)
+                    for (int j = 8; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }
