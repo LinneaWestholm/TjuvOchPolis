@@ -18,19 +18,22 @@ namespace TjuvOchPolis
                 if (i == 0)
                 {
                     Console.SetCursorPosition(110, 12);
-                    for (int k = 0; k < width; k++)
+                    Console.Write("Härberge");
+                    for (int k = 7; k < width - 1; k++)
                     {
 
                         Console.Write("=");
                     }
+                    Console.Write(" ");
                     Console.WriteLine();
                 }
+
                 else if (i == height - 1)
                 {
                     Console.SetCursorPosition(110, 24);
-                    Console.Write("Härberge");
+                    Console.Write("Status");
 
-                    for (int j = 7; j < width - 1; j++)
+                    for (int j = 5; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }
