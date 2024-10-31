@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -84,8 +86,10 @@ namespace TjuvOchPolis
         "Erik Eriksson", "Fardhe Magnusson","Velam Johannesson","Julian Sjöholm","Albert Almqvist","Eric Forslund","Lucas Lindroth","Leif Ohly","Locis Svensson",
         "Alex Öberg", "John Lagerkvist","Christian Lötvall","Åke Liljeström","Oskar Björk","Kjell Afzelius","Elliot Sjöberg","Sverker Sundström","Stella Englund",
         "Per Fornberg", "Viggo Forslund","Gösta Sundström","Valter Aspelund","Håkan Sparv","Jack Jansson","Isac Hagelin","Folke Adelsköld","Elin Augustsson",
-        "Fardhe Stenström","Calle Rehnquist","Vincent Holm","Johan Lindeman","Hans Fornberg","Spjälle Malmkvist","Leif Bloch","Ella Lagerlöf"
-
+        "Fardhe Stenström","Calle Rehnquist","Vincent Holm","Johan Lindeman","Hans Fornberg","Spjälle Malmkvist","Leif Bloch","Ella Lagerlöf", "Theo Åström",
+        "Hjalmar Granestrand","Gert Pettersson", "Viktor Berglund", "Elliot Samuelsson", "Filip Ask", "Mio Fredriksson", "Nicklas Berglund", "Eve Söderström",
+         "Emanuel Ström", "Carola Sandell", "Terese Lindholm", "Nora Magnusson", "Maj-Lis André", "Herta Ericsson", "Jessica Johansson", "Katrin Hansson",
+         "Ida Sundberg","Lovis Persson","Christin Gustavsson"
     };
         private static Random rnd = new Random();
         public static string CreatePerson()
