@@ -32,6 +32,7 @@ namespace TjuvOchPolis
                         civilian.PositionY = 20;
                         Console.SetCursorPosition(1, 25);
                         Console.WriteLine($"Medborgaren {civilian.Name} har inga värdesaker kvar och behöver åka till härberget för att kunna överleva.");
+                        Person.poorCivilian++;
                         Thread.Sleep(2000);
                     }
                     Thread.Sleep(2000);

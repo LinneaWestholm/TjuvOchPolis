@@ -25,6 +25,7 @@ namespace TjuvOchPolis
                     theif.PositionY = 5;
                     Thread.Sleep(2000);
                 }
+                Person.theifInPrison++;
                 theif.Inventory.Clear();
             }
             else

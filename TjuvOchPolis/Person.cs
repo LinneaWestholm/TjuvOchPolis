@@ -97,6 +97,8 @@ namespace TjuvOchPolis
         //    Console.SetCursorPosition(110, 26);
         //    Console.WriteLine($"{police}");
         //}
+        public static int theifInPrison = 0;
+        public static int poorCivilian = 0;
         public static void Status(List<Person> people)
         {
             // Räknar antalet poliser i listan
@@ -111,6 +113,10 @@ namespace TjuvOchPolis
             Console.WriteLine($"Antal tjuvar: {thiefCount}");
             Console.SetCursorPosition(110, 28);
             Console.WriteLine($"Antal medborgare: {civilianCount}");
+            Console.SetCursorPosition(110, 29);
+            Console.WriteLine($"Antal tjuvar i staden: {thiefCount-theifInPrison}");
+            Console.SetCursorPosition(110, 30);
+            Console.WriteLine($"Antal medborgare i staden: {civilianCount-poorCivilian}");
         }
     }
 }
