@@ -84,9 +84,14 @@ namespace TjuvOchPolis
                         person.Move();
                         person.Movement();
                     }
-                    foreach (var thief in people.OfType<Theif>())
+                    foreach (var police in people.OfType<Police>())
+                    {
+                        police.HasConfiscated();
+                    }
+                        foreach (var thief in people.OfType<Theif>())
                     {
                         thief.Stolen();
+                        
                     }
                     foreach (var civilian in people.OfType<Civilian>())
                     {

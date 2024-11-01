@@ -13,8 +13,12 @@ namespace TjuvOchPolis
 
         public static void AddMessage(string message)
         {
+          
             messages.Add(nr + " " + message);
+            
+            nr++;
             if (messages.Count > 10) messages.RemoveAt(0);
+
 
         }
 
@@ -26,10 +30,7 @@ namespace TjuvOchPolis
             {
                 Console.WriteLine($"{message}");
 
-                if (messages.Count >= nr)
-                {
-                    nr++;
-                }
+                
             }
         }
     }
