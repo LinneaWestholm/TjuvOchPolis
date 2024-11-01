@@ -19,8 +19,7 @@ namespace TjuvOchPolis
                 foreach (var item in theif.Inventory)
                 {
                     police.Inventory.Add(item);
-                    Console.SetCursorPosition(1, 26);
-                    Console.WriteLine($"Polisen {police.Name} tar {item} som tjuven {theif.Name} har stulit.");
+                    Newsfeed.AddMessage($"Polisen {police.Name} tar {item} som tjuven {theif.Name} har stulit.");
                     theif.PositionX = 120;
                     theif.PositionY = 5;
                     Thread.Sleep(2000);
@@ -30,8 +29,7 @@ namespace TjuvOchPolis
             }
             else
             {
-                Console.SetCursorPosition(1, 26);
-                Console.WriteLine($"{theif.Name} har inga stulna föremål att ta.");
+                Newsfeed.AddMessage($"{theif.Name} har inga stulna föremål att ta.");
             }
         }
         public override char Title => 'P';

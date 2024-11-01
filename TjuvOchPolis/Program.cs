@@ -66,6 +66,7 @@ namespace TjuvOchPolis
 
                     City.Print();
                     Person.Status(people);
+                    Newsfeed.ShowFeed();
                     foreach (Person person in people)
                     {
                         if (person.Title == 'P')
