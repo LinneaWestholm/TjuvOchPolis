@@ -24,7 +24,7 @@ namespace TjuvOchPolis
 
         public static void ShowFeed()
         {
-
+            
             Console.SetCursorPosition(0, 27);
             foreach (string message in messages)
             {
@@ -32,6 +32,7 @@ namespace TjuvOchPolis
 
                 
             }
+            
         }
     }
 }

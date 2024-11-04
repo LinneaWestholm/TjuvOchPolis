@@ -59,12 +59,14 @@ namespace TjuvOchPolis
                     }
                     people.Add(new Theif(posY, posX, dirX, dirY, randomName));
                 }
+                Console.ForegroundColor = ConsoleColor.White;
+                City.Print();
                 while (true)
                 {
-                    Console.Clear();
+                    //Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
 
-                    City.Print();
+                    
                     Person.Status(people);
                     Newsfeed.ShowFeed();
                     foreach (Person person in people)
@@ -109,8 +111,7 @@ namespace TjuvOchPolis
                                 }
                             }
                         }
-                    }
-                    Thread.Sleep(500);
+                    }                    
                 }
             }
         }

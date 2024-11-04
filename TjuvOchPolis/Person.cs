@@ -16,6 +16,8 @@ namespace TjuvOchPolis
         public string Name { get; private set; }
         public int PositionY { get; set; }
         public int PositionX { get; set; }
+        public int PreviousX { get; set; }
+        public int PreviousY { get; set; }
         public int DirectionY { get; set; }
         public int DirectionX { get; set; }
         public virtual char Title { get; }
@@ -70,7 +72,12 @@ namespace TjuvOchPolis
                 }
             }
             Console.SetCursorPosition(PositionX, PositionY);
+            
             Console.Write(Title);
+            Console.SetCursorPosition(PreviousX, PreviousY);
+            Console.Write(' ');
+            PreviousX = PositionX;
+            PreviousY = PositionY;
         }
         private static List<string> names = new List<string>()
         {
