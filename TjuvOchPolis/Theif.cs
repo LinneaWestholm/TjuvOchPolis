@@ -31,7 +31,7 @@ namespace TjuvOchPolis
                         civilian.PositionX = 120;
                         civilian.PositionY = 20;
                         Console.SetCursorPosition(1, 25);
-                        Newsfeed.AddMessage($"Medborgaren {civilian.Name} har inga värdesaker kvar och behöver åka till härberget för att kunna överleva.");
+                        Newsfeed.AddMessage($"Medborgaren {civilian.Name} är pank och behöver åka till härberget för att kunna överleva.");
                         Person.poorCivilian++;         
                         Thread.Sleep(2000);
                     }

@@ -108,17 +108,17 @@ namespace TjuvOchPolis
             int thiefCount = people.OfType<Theif>().Count();
             int civilianCount = people.OfType<Civilian>().Count();
 
-            Console.SetCursorPosition(110, 25);
-            Console.WriteLine($"Antal poliser: {policeCount}");
             Console.SetCursorPosition(110, 26);
+            Console.WriteLine($"Antal poliser: {policeCount}");
+            Console.SetCursorPosition(110, 27);
       
             Console.WriteLine($"Antal tjuvar: {thiefCount}");
-            Console.SetCursorPosition(110, 27);
-            Console.WriteLine($"Antal medborgare: {civilianCount}");
             Console.SetCursorPosition(110, 28);
-            Console.WriteLine($"Antal tjuvar i staden: {thiefCount-theifInPrison}");
+            Console.WriteLine($"Antal medborgare: {civilianCount}");
             Console.SetCursorPosition(110, 29);
-            Console.WriteLine($"Antal medborgare i staden: {civilianCount - poorCivilian}");
+            Console.WriteLine($"Antal tjuvar i staden: {thiefCount-theifInPrison} ");
+            Console.SetCursorPosition(110, 30);
+            Console.WriteLine($"Antal medborgare i staden: {civilianCount - poorCivilian} ");
         }
     }
 }

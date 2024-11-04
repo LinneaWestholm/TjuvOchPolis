@@ -24,8 +24,13 @@ namespace TjuvOchPolis
 
         public static void ShowFeed()
         {
-            
-            Console.SetCursorPosition(0, 27);
+            Console.SetCursorPosition(0, 26);
+            foreach (string message in messages)
+            {
+                Console.WriteLine($"                                                                                                    ");
+            }
+
+            Console.SetCursorPosition(0, 26);
             foreach (string message in messages)
             {
                 Console.WriteLine($"{message}");
