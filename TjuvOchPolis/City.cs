@@ -27,9 +27,9 @@ namespace TjuvOchPolis
                 }
                 else if (i == height - 2)
                 {
-                    Console.Write("News Feed");
+                    Console.Write("Nyhetsflöde");
 
-                    for (int j = 8; j < width - 1; j++)
+                    for (int j = 10; j < width - 1; j++)
                     {
                         Console.Write("=");
                     }

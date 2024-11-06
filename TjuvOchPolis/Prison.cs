@@ -39,13 +39,13 @@ namespace TjuvOchPolis
                 else
                 {
                     Console.SetCursorPosition(110, i);
-                    Console.Write("|");
+                    Console.Write("X");
 
                     for (int j = 1; j < width - 1; j++)
                     {
                         Console.Write(" ");
                     }
-                    Console.Write("|");
+                    Console.Write("X");
                     Console.WriteLine();
                 }
             }

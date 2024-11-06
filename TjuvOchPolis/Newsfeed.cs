@@ -13,6 +13,7 @@ namespace TjuvOchPolis
 
         public static void AddMessage(string message)
         {
+   
             messages.Add(nr + " " + message);
             
             nr++;
@@ -27,7 +28,7 @@ namespace TjuvOchPolis
             }
 
             Console.SetCursorPosition(0, 26);
-            foreach (string message in messages)
+            foreach (string message in messages.ToList().AsEnumerable().Reverse())
             {
                 Console.WriteLine($"{message}");           
             }         

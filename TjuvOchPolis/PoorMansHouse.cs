@@ -21,7 +21,6 @@ namespace TjuvOchPolis
                     Console.Write("Härberge");
                     for (int k = 7; k < width - 1; k++)
                     {
-
                         Console.Write("=");
                     }
                     Console.Write(" ");
@@ -44,7 +43,7 @@ namespace TjuvOchPolis
                 else
                 {
                     Console.SetCursorPosition(110, i + 12);
-                    Console.Write("|");
+                    Console.Write("X");
 
                     for (int j = 1; j < width - 1; j++)
                     {
@@ -52,7 +51,7 @@ namespace TjuvOchPolis
                         Console.Write(" ");
 
                     }
-                    Console.Write("|");
+                    Console.Write("X");
                     Console.WriteLine();
                 }
             }
