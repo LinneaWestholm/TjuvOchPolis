@@ -16,8 +16,8 @@ namespace TjuvOchPolis
         public string Name { get; private set; }
         public int PositionY { get; set; }
         public int PositionX { get; set; }
-        public int PreviousX { get; set; }
-        public int PreviousY { get; set; }
+        public int PreviousX { get; set; } = 1;
+        public int PreviousY { get; set; } = 1;
         public int DirectionY { get; set; }
         public int DirectionX { get; set; }
         public virtual char Title { get; }
@@ -72,10 +72,11 @@ namespace TjuvOchPolis
                 }
             }
             Console.SetCursorPosition(PositionX, PositionY);
-            
             Console.Write(Title);
             Console.SetCursorPosition(PreviousX, PreviousY);
-            Console.Write(' ');
+
+            Console.WriteLine(" ");
+
             PreviousX = PositionX;
             PreviousY = PositionY;
         }
@@ -103,7 +104,6 @@ namespace TjuvOchPolis
         public static int poorCivilian = 0;
         public static void Status(List<Person> people)
         {
-            
             int policeCount = people.OfType<Police>().Count();
             int thiefCount = people.OfType<Theif>().Count();
             int civilianCount = people.OfType<Civilian>().Count();
@@ -111,16 +111,13 @@ namespace TjuvOchPolis
             Console.SetCursorPosition(110, 26);
             Console.WriteLine($"Antal poliser: {policeCount}");
             Console.SetCursorPosition(110, 27);
-      
             Console.WriteLine($"Antal tjuvar: {thiefCount}");
             Console.SetCursorPosition(110, 28);
             Console.WriteLine($"Antal medborgare: {civilianCount}");
             Console.SetCursorPosition(110, 29);
-            Console.WriteLine($"Antal tjuvar i staden: {thiefCount-theifInPrison} ");
+            Console.WriteLine($"Antal tjuvar i staden: {thiefCount - theifInPrison} ");
             Console.SetCursorPosition(110, 30);
             Console.WriteLine($"Antal medborgare i staden: {civilianCount - poorCivilian} ");
         }
     }
 }
-
-

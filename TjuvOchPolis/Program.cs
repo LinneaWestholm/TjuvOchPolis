@@ -63,9 +63,7 @@ namespace TjuvOchPolis
                 City.Print();
                 while (true)
                 {
-                    //Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
-
                     
                     Person.Status(people);
                     Newsfeed.ShowFeed();
@@ -83,6 +81,7 @@ namespace TjuvOchPolis
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
+                          
                         person.Move();
                         person.Movement();
                     }
@@ -93,7 +92,6 @@ namespace TjuvOchPolis
                         foreach (var thief in people.OfType<Theif>())
                     {
                         thief.Stolen();
-                        
                     }
                     foreach (var civilian in people.OfType<Civilian>())
                     {
@@ -111,7 +109,8 @@ namespace TjuvOchPolis
                                 }
                             }
                         }
-                    }                    
+                    }
+                    Thread.Sleep(100);
                 }
             }
         }

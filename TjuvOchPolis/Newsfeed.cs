@@ -13,15 +13,11 @@ namespace TjuvOchPolis
 
         public static void AddMessage(string message)
         {
-          
             messages.Add(nr + " " + message);
             
             nr++;
             if (messages.Count > 10) messages.RemoveAt(0);
-
-
         }
-
         public static void ShowFeed()
         {
             Console.SetCursorPosition(0, 26);
@@ -33,11 +29,8 @@ namespace TjuvOchPolis
             Console.SetCursorPosition(0, 26);
             foreach (string message in messages)
             {
-                Console.WriteLine($"{message}");
-
-                
-            }
-            
+                Console.WriteLine($"{message}");           
+            }         
         }
     }
 }

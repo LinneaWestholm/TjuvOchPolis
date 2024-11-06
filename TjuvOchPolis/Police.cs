@@ -17,8 +17,6 @@ namespace TjuvOchPolis
         {
             if (!hasConfiscated)
             {
-
-
                 if (theif.Inventory.Count > 0)
                 {
                     foreach (var item in theif.Inventory)
@@ -27,7 +25,7 @@ namespace TjuvOchPolis
                         Newsfeed.AddMessage($"Polisen {police.Name} tar {item} som tjuven {theif.Name} har stulit.");
                         theif.PositionX = 120;
                         theif.PositionY = 5;
-                        Thread.Sleep(2000);
+                        Thread.Sleep(500);
                     }
                     Person.theifInPrison++;
                     theif.Inventory.Clear();

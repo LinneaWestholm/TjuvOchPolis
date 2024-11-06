@@ -17,9 +17,9 @@ namespace TjuvOchPolis
             {
                 if (i == 0)
                 {
-                    Console.Write("City");
+                    Console.Write("Staden");
 
-                    for (int k = 4; k < width; k++)
+                    for (int k = 6; k < width; k++)
                     {
                         Console.Write("=");
                     }

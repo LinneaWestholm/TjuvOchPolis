@@ -20,7 +20,6 @@ namespace TjuvOchPolis
                     Console.SetCursorPosition(110, 0);
                     for (int k = 0; k < width; k++)
                     {
-
                         Console.Write("=");
                     }
                     Console.WriteLine();
@@ -34,7 +33,6 @@ namespace TjuvOchPolis
                     {
                         Console.Write("=");
                     }
-
                     Console.Write(" ");
                     Console.WriteLine();
                 }
@@ -45,9 +43,7 @@ namespace TjuvOchPolis
 
                     for (int j = 1; j < width - 1; j++)
                     {
-
                         Console.Write(" ");
-
                     }
                     Console.Write("|");
                     Console.WriteLine();
