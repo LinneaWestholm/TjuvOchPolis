@@ -7,6 +7,7 @@ namespace TjuvOchPolis
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Console.Title = "Tjuv och Polis";
 
             List<string> inventory = new List<string>();
